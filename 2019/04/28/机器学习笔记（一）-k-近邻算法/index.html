@@ -9,13 +9,14 @@
   <title>机器学习笔记（一） k-近邻算法 | 杂食Space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="k-近邻算法 概述k-近邻算法采用测量不同特征值之间的距离方法进行分类。 优点：精度高、对异常值不敏感、无数据输入假定 缺点：计算复杂度高、空间复杂度高 适用数据范围：数值型和标称型 k-近邻算法 原理存在一个样本数据集合，也称为训练样本集，并且样本集中每个数据都存在标签。输入没有标签的新数据后，将新数据的每个特征与样本集中数据对应的特征进行比较，然后算法提取样本集中特征最相似数据（最近邻的）的分">
+<meta name="keywords" content="机器学习,k-近邻">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习笔记（一） k-近邻算法">
 <meta property="og:url" content="http://yoursite.com/2019/04/28/机器学习笔记（一）-k-近邻算法/index.html">
 <meta property="og:site_name" content="杂食Space">
 <meta property="og:description" content="k-近邻算法 概述k-近邻算法采用测量不同特征值之间的距离方法进行分类。 优点：精度高、对异常值不敏感、无数据输入假定 缺点：计算复杂度高、空间复杂度高 适用数据范围：数值型和标称型 k-近邻算法 原理存在一个样本数据集合，也称为训练样本集，并且样本集中每个数据都存在标签。输入没有标签的新数据后，将新数据的每个特征与样本集中数据对应的特征进行比较，然后算法提取样本集中特征最相似数据（最近邻的）的分">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-13T14:39:17.101Z">
+<meta property="og:updated_time" content="2019-05-15T02:34:58.298Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习笔记（一） k-近邻算法">
 <meta name="twitter:description" content="k-近邻算法 概述k-近邻算法采用测量不同特征值之间的距离方法进行分类。 优点：精度高、对异常值不敏感、无数据输入假定 缺点：计算复杂度高、空间复杂度高 适用数据范围：数值型和标称型 k-近邻算法 原理存在一个样本数据集合，也称为训练样本集，并且样本集中每个数据都存在标签。输入没有标签的新数据后，将新数据的每个特征与样本集中数据对应的特征进行比较，然后算法提取样本集中特征最相似数据（最近邻的）的分">
@@ -175,7 +176,7 @@
 缺点：计算复杂度高、空间复杂度高
 适用数据范围：数值型和标称型
 </code></pre><h1 id="k-近邻算法-原理"><a href="#k-近邻算法-原理" class="headerlink" title="k-近邻算法 原理"></a>k-近邻算法 原理</h1><p>存在一个样本数据集合，也称为<strong>训练样本集</strong>，并且样本集中每个数据都存在标签。输入没有标签的新数据后，将新数据的每个特征与样本集中数据对应的特征进行比较，然后算法提取样本集中特征最相似数据（最近邻的）的分类标签。</p>
-<p>一般来说，我们只选择样本数据集中<strong>前k个</strong>最相似的数据，通常k是不大于20的整数。</p>
+<p>一般来说，我们只选择样本数据集中<strong>前k个</strong>最相似的数据，通常k是不大于20的整数。<br><a id="more"></a></p>
 <h1 id="k-近邻算法-一般流程"><a href="#k-近邻算法-一般流程" class="headerlink" title="k-近邻算法 一般流程"></a>k-近邻算法 一般流程</h1><pre><code>（1）收集数据：可以使用任何方法。
 （2）准备数据：距离计算所需要的数值，最好是结构化的数据格式。
 （3）分析数据：可以使用任何方法。
@@ -205,6 +206,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">k-近邻</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -268,6 +284,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/05/13/算法（一）-C-C-补漏拾遗/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          算法（一） C/C++补漏拾遗
+        
+      </div>
+    </a>
   
   
     <a href="/2019/03/23/What-up/" id="article-nav-older" class="article-nav-link-wrap">
@@ -395,6 +420,50 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">-算法 -c++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">-机器学习 -k-近邻</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">-算法
+-c++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">-机器学习
+-k-近邻</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">-机器学习,
+-k-近邻</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">-算法,
+-c++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">k-近邻</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">c++</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
