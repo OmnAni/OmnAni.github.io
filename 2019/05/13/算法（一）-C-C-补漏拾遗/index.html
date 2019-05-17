@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>算法（一） C/C++补漏拾遗 | 杂食Space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="..打算过段时间去考CSP，所以最近准备系统性地学一下算法，刚好对考研数据结构也多少有点帮助。这段时间上课写作业用Python比较多，C++很久没用过了，很多用法也忘记了，趁这个机会也可以查漏补缺，不求学多深吧，算法考试够用就满足了。 变量类型整型int取值范围：-2  10^9 ~ 2  10^9绝对值在10^9范围以内的整数都可以定义为int型。 long long取值范围：-2 * 10^6">
+  <meta name="description" content="..打算过段时间去考CSP，所以最近准备系统性地学一下算法，刚好对考研数据结构也多少有点帮助。这段时间上课写作业用Python比较多，C++很久没用过了，很多用法也忘记了，趁这个机会也可以查漏补缺，不求学多深吧，算法考试够用就满足了。 万能头文件&amp;lt;bits/stdc++.h&amp;gt;唯一缺点是有些oj系统不支持，使用时编译器选择C++。 变量类型整型int取值范围：-2  10^9 ~ 2">
 <meta name="keywords" content="算法,c++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法（一） C&#x2F;C++补漏拾遗">
 <meta property="og:url" content="http://yoursite.com/2019/05/13/算法（一）-C-C-补漏拾遗/index.html">
 <meta property="og:site_name" content="杂食Space">
-<meta property="og:description" content="..打算过段时间去考CSP，所以最近准备系统性地学一下算法，刚好对考研数据结构也多少有点帮助。这段时间上课写作业用Python比较多，C++很久没用过了，很多用法也忘记了，趁这个机会也可以查漏补缺，不求学多深吧，算法考试够用就满足了。 变量类型整型int取值范围：-2  10^9 ~ 2  10^9绝对值在10^9范围以内的整数都可以定义为int型。 long long取值范围：-2 * 10^6">
+<meta property="og:description" content="..打算过段时间去考CSP，所以最近准备系统性地学一下算法，刚好对考研数据结构也多少有点帮助。这段时间上课写作业用Python比较多，C++很久没用过了，很多用法也忘记了，趁这个机会也可以查漏补缺，不求学多深吧，算法考试够用就满足了。 万能头文件&amp;lt;bits/stdc++.h&amp;gt;唯一缺点是有些oj系统不支持，使用时编译器选择C++。 变量类型整型int取值范围：-2  10^9 ~ 2">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-15T02:47:18.126Z">
+<meta property="og:updated_time" content="2019-05-17T09:11:25.519Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法（一） C&#x2F;C++补漏拾遗">
-<meta name="twitter:description" content="..打算过段时间去考CSP，所以最近准备系统性地学一下算法，刚好对考研数据结构也多少有点帮助。这段时间上课写作业用Python比较多，C++很久没用过了，很多用法也忘记了，趁这个机会也可以查漏补缺，不求学多深吧，算法考试够用就满足了。 变量类型整型int取值范围：-2  10^9 ~ 2  10^9绝对值在10^9范围以内的整数都可以定义为int型。 long long取值范围：-2 * 10^6">
+<meta name="twitter:description" content="..打算过段时间去考CSP，所以最近准备系统性地学一下算法，刚好对考研数据结构也多少有点帮助。这段时间上课写作业用Python比较多，C++很久没用过了，很多用法也忘记了，趁这个机会也可以查漏补缺，不求学多深吧，算法考试够用就满足了。 万能头文件&amp;lt;bits/stdc++.h&amp;gt;唯一缺点是有些oj系统不支持，使用时编译器选择C++。 变量类型整型int取值范围：-2  10^9 ~ 2">
   
     <link rel="alternative" href="/atom.xml" title="杂食Space" type="application/atom+xml">
   
@@ -172,6 +172,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id><a href="#" class="headerlink" title=".."></a>..</h1><p>打算过段时间去考CSP，所以最近准备系统性地学一下算法，刚好对考研数据结构也多少有点帮助。这段时间上课写作业用Python比较多，C++很久没用过了，很多用法也忘记了，趁这个机会也可以查漏补缺，不求学多深吧，算法考试够用就满足了。</p>
+<h1 id="万能头文件-lt-bits-stdc-h-gt"><a href="#万能头文件-lt-bits-stdc-h-gt" class="headerlink" title="万能头文件&lt;bits/stdc++.h&gt;"></a>万能头文件&lt;bits/stdc++.h&gt;</h1><p>唯一缺点是有些oj系统不支持，使用时编译器选择C++。</p>
 <h1 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h1><h2 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h2><p><strong>int</strong>取值范围：-2 <em> 10^9 ~ 2 </em> 10^9<br><br>绝对值在10^9范围以内的整数都可以定义为int型。</p>
 <p><strong>long long</strong>取值范围：-2 * 10^63 ~ 2^63-1<br><a id="more"></a></p>
 <h2 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h2><p><strong>%f</strong>是float和double的输出格式，double比float精度高很多。<br><br>但double类型的输入格式为%lf。</p>
@@ -210,6 +211,8 @@
 <h1 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h1><p>指针实际是一个unsigned类型的整数。</p>
 <h1 id="浮点数的比较"><a href="#浮点数的比较" class="headerlink" title="浮点数的比较"></a>浮点数的比较</h1><p>浮点数在计算机中的存储并不总是精确的，经过大量计算后，3.14就可能存储成3.1400000001或其他值，这种情况会对比较操作带来极大的干扰。于是需要引入一个极小数eps修正误差。<br><br>实际操作时，如果数a在区间[b-eps, b+eps]中，就应判定a=b成立。经验表明，eps取10^(-8)比较合适。<br><br>一般写法：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> eps = <span class="number">1</span>e - <span class="number">8</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Equ(a, b) ((fabs((a)-(b))) &lt; (eps))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> More(a, b) (((a)-(b)) &gt; (eps))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Less(a, b) (((a)-(b)) &lt; (eps))</span></span><br></pre></td></tr></table></figure></p>
 <h1 id="圆周率"><a href="#圆周率" class="headerlink" title="圆周率"></a>圆周率</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> Pi = <span class="built_in">acos</span>(<span class="number">-1.0</span>);<span class="comment">//注意引入math.h</span></span><br></pre></td></tr></table></figure>
+<h1 id="cin-cout提高效率"><a href="#cin-cout提高效率" class="headerlink" title="cin/cout提高效率"></a>cin/cout提高效率</h1><p>在<code>#include &lt;bits/stdc++.h&gt;</code>条件下，<code>cin</code>/<code>cout</code>与<code>scanf</code>/<code>printf</code>皆可使用。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ios::sync_with_stdio(<span class="literal">false</span>)</span><br></pre></td></tr></table></figure></p>
+<p>这行代码可以提高cin/cout的速度，避免边缘情况下的超时。</p>
 
       
 
@@ -462,7 +465,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">日期处理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">图形输出</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">查找</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">c++</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -471,14 +486,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">k-近邻</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">c++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">图形输出</a>
               </li>
             
             <div class="clearfix"></div>
