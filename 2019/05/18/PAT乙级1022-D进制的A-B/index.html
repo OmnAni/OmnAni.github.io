@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/5 | 杂食Space</title>
+  <title>PAT乙级1022 D进制的A+B | 杂食Space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="杂食Space">
-<meta property="og:url" content="http://yoursite.com/archives/2019/05/index.html">
+  <meta name="description" content="题目（20分）输入两个非负 10 进制整数 A 和 B (≤2 ^ 30 − 1)，输出 A+B 的 D (1&amp;lt;D≤10)进制数。">
+<meta name="keywords" content="PAT,进制转换,算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PAT乙级1022 D进制的A+B">
+<meta property="og:url" content="http://yoursite.com/2019/05/18/PAT乙级1022-D进制的A-B/index.html">
 <meta property="og:site_name" content="杂食Space">
+<meta property="og:description" content="题目（20分）输入两个非负 10 进制整数 A 和 B (≤2 ^ 30 − 1)，输出 A+B 的 D (1&amp;lt;D≤10)进制数。">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2019/05/18/PAT乙级1022-D进制的A-B/submit.JPG">
+<meta property="og:updated_time" content="2019-05-24T02:13:51.337Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="杂食Space">
+<meta name="twitter:title" content="PAT乙级1022 D进制的A+B">
+<meta name="twitter:description" content="题目（20分）输入两个非负 10 进制整数 A 和 B (≤2 ^ 30 − 1)，输出 A+B 的 D (1&amp;lt;D≤10)进制数。">
+<meta name="twitter:image" content="http://yoursite.com/2019/05/18/PAT乙级1022-D进制的A-B/submit.JPG">
   
     <link rel="alternative" href="/atom.xml" title="杂食Space" type="application/atom+xml">
   
@@ -146,36 +153,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-PAT乙级1022-D进制的A-B" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/18/PAT乙级1022-D进制的A-B/" class="archive-article-date">
-  	<time datetime="2019-05-18T13:17:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-18</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/18/PAT乙级1022-D进制的A-B/">PAT乙级1022 D进制的A+B</a>
+    <h1 class="article-title" itemprop="name">
+      PAT乙级1022 D进制的A+B
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/05/18/PAT乙级1022-D进制的A-B/" class="archive-article-date">
+  	<time datetime="2019-05-18T13:17:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="题目（20分）"><a href="#题目（20分）" class="headerlink" title="题目（20分）"></a>题目（20分）</h1><p>输入两个非负 10 进制整数 A 和 B (≤2 ^ 30 − 1)，输出 A+B 的 D (1&lt;D≤10)进制数。</p>
+<a id="more"></a>
+<h1 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h1><p>输入在一行中依次给出 3 个整数 A、B 和 D。</p>
+<h1 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h1><p>输出 A+B 的 D 进制数。</p>
+<h1 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例"></a>输入样例</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">123 456 8</span><br></pre></td></tr></table></figure>
+<h1 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例"></a>输出样例</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1103</span><br></pre></td></tr></table></figure>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>先算出A+B的十进制值，然后除积取余法把结果的每一位存入数组，最后倒序输出即可。</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a, b, d;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b &gt;&gt; d;</span><br><span class="line">	<span class="keyword">int</span> src = a + b;</span><br><span class="line">	<span class="keyword">int</span> bits = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> ans[<span class="number">100</span>] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">	<span class="keyword">if</span> (src == <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="number">0</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (src != <span class="number">0</span>) &#123;</span><br><span class="line">		ans[bits] = src % d;</span><br><span class="line">		src /= d;</span><br><span class="line">		bits++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = bits - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; ans[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h1><p><img src="/2019/05/18/PAT乙级1022-D进制的A-B/submit.JPG" alt="submit"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -195,325 +209,122 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/18/PAT乙级1022-D进制的A-B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/17/codeup-1928-日期差值/" class="archive-article-date">
-  	<time datetime="2019-05-17T03:11:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-17</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/05/17/codeup-1928-日期差值/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">codeup 1928 日期差值</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/17/codeup-1928-日期差值/">codeup 1928 日期差值</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">codeup</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日期处理</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/17/PAT乙级1036-跟奥巴马一起编程/" class="archive-article-date">
-  	<time datetime="2019-05-17T02:35:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/17/PAT乙级1036-跟奥巴马一起编程/">PAT乙级1036 跟奥巴马一起编程</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PAT</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">图形输出</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/15/codeup-1934-找x/" class="archive-article-date">
-  	<time datetime="2019-05-15T12:43:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/15/codeup-1934-找x/">codeup 1934 找x</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">codeup</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">查找</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/15/PAT乙级1032-挖掘机技术哪家强/" class="archive-article-date">
-  	<time datetime="2019-05-15T03:29:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-15</time>
-</a>
-        </div>
-    	 
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="https://jjeejj.github.io/js/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://yoursite.com/2019/05/18/PAT乙级1022-D进制的A-B/",
+  owner: 'OmnAni',
+  repo: 'OmnAni.github.io',
+  oauth: {
+    client_id: 'e95fc54c85420c4f78a6',
+    client_secret: 'e515771b94fe710bbb4afe9a629b80476b3c308e',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/15/PAT乙级1032-挖掘机技术哪家强/">PAT乙级1032 挖掘机技术哪家强</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PAT</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/15/PAT乙级1001-害死人不偿命的-3n-1-猜想/" class="archive-article-date">
-  	<time datetime="2019-05-15T03:09:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/15/PAT乙级1001-害死人不偿命的-3n-1-猜想/">PAT乙级1001 害死人不偿命的(3n+1)猜想</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PAT</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/15/PAT做题汇总/" class="archive-article-date">
-  	<time datetime="2019-05-15T03:01:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/15/PAT做题汇总/">PAT做题汇总</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PAT</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/13/算法（一）-C-C-补漏拾遗/" class="archive-article-date">
-  	<time datetime="2019-05-13T14:32:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/13/算法（一）-C-C-补漏拾遗/">算法（一） C/C++补漏拾遗</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -536,8 +347,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
