@@ -168,16 +168,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>冒泡排序的本质在于<strong>交换</strong>，每次通过交换的方式把当前剩余元素的最大值移动到一端，而当剩余元素减少为0时，排序结束。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>] = &#123; <span class="number">3</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">2</span> &#125;;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">5</span>; i++) &#123;<span class="comment">//进行n - 1趟</span></span><br><span class="line">		<span class="comment">//第i趟时从a[0]到a[n - i - 1]都与它们下一个数比较</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span> - i; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (a[j] &gt; a[j + <span class="number">1</span>]) &#123;</span><br><span class="line">				<span class="keyword">int</span> temp = a[j];</span><br><span class="line">				a[j] = a[j + <span class="number">1</span>];</span><br><span class="line">				a[j + <span class="number">1</span>] = temp;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>, a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>简单选择排序：</p>
-<p>对一个序列A中的元素A[1] ~ A[n]，令i从1到n枚举，进行n趟操作，每趟从待排序部分[i,n]中选择最小的元素，令其与待排序部分的第一个元素A[i]进行交换，这样元素A[i]就会与当前有序区间[1,i-1]形成新的有序区间[1,i]。于是在n趟操作后，所有元素就会是有序的。</p>
-<p>总共需要进行n趟操作，每趟操作选出[i,n]中最小的元素，时间复杂度为O(n^2)</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectsort</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123; <span class="comment">//进行n趟操作</span></span><br><span class="line">		<span class="keyword">int</span> k = i;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt;= n; j++) &#123; <span class="comment">//选出[i,n]中最小的元素，下标为k</span></span><br><span class="line">			<span class="keyword">if</span> (A[j] &lt; A[k]) &#123;</span><br><span class="line">				k = j;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> temp = A[i];</span><br><span class="line">		A[i] = A[k];</span><br><span class="line">		A[k] = temp;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>直接插入排序：</p>
-<p>对序列A的n个元素A[1] ~ A[n]，令i从2到n枚举，进行n-1趟操作。假设某一趟时，序列A的前i-1个元素A[1] ~ A[i-1]已经有序，而范围[i,n]还未有序，那么该趟从范围[1,i-1]中寻找某个位置j，使得将A[i]插入位置j后，范围[1,i]有序。</p>
-<p>插入排序是将待插入元素一个个插入初始已有序部分的过程，而插入位置的选择遵循了<strong>使插入后仍然保持有序</strong>的原则，具体做法一般是<strong>从后往前枚举已有序部分</strong>来确定插入位置。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> A[maxn], n;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insertSort</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">int</span> temp = A[i], j = i;<span class="comment">//temp临时存放A[i]，j从i开始往前枚举</span></span><br><span class="line">		<span class="keyword">while</span> (j &gt; <span class="number">1</span> &amp;&amp; temp &lt; A[j - <span class="number">1</span>]) &#123;<span class="comment">//只要temp小于前一个元素A[j-1]</span></span><br><span class="line">			A[j] = A[j - <span class="number">1</span>];<span class="comment">//把A[j-1]后移一位至A[j]</span></span><br><span class="line">			j--;</span><br><span class="line">		&#125;</span><br><span class="line">		A[j] = temp;<span class="comment">//插入位置为j</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="排序题与sort函数的应用"><a href="#排序题与sort函数的应用" class="headerlink" title="排序题与sort函数的应用"></a>排序题与sort函数的应用</h2><h3 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h3>
+        <h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>冒泡排序的本质在于<strong>交换</strong>，每次通过交换的方式把当前剩余元素的最大值移动到一端，而当剩余元素减少为0时，排序结束。<br></p>
+        
+          <a class="article-more-a" href="/2019/05/25/算法（三）-算法初步/#more">more >></a>
+        
       
 
       
@@ -1151,7 +1145,39 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">进制转换</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">字符串处理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">图形输出</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">codeup</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">日期处理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">查找</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">k-近邻</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">c++</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1176,38 +1202,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">two pointers</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">图形输出</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">进制转换</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">codeup</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">查找</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">c++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日期处理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">k-近邻</a>
               </li>
             
             <div class="clearfix"></div>
