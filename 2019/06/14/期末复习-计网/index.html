@@ -18,7 +18,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2019/06/14/期末复习-计网/NAT.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/06/14/期末复习-计网/TCP首部格式.jpg">
-<meta property="og:updated_time" content="2019-06-19T03:14:15.093Z">
+<meta property="og:updated_time" content="2019-06-19T05:31:39.684Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="期末复习_计网">
 <meta name="twitter:description" content="五层体系结构 应用层   通过应用进程间的交互来完成特定网络应用。  运输层   负责向两台主机中进程之间的通信提供通用的数据传输服务。   TCP/UDP属于运输层。">
@@ -228,8 +228,24 @@
 <li>按固定的时间间隔交换路由信息。</li>
 </ul>
 <p>距离向量算法：P155</p>
-<h2 id="OSPF（网络层协议）"><a href="#OSPF（网络层协议）" class="headerlink" title="OSPF（网络层协议）"></a>OSPF（网络层协议）</h2><p>类型</p>
-<h2 id="BGP（网络层协议）"><a href="#BGP（网络层协议）" class="headerlink" title="BGP（网络层协议）"></a>BGP（网络层协议）</h2>
+<h2 id="OSPF（网络层协议）"><a href="#OSPF（网络层协议）" class="headerlink" title="OSPF（网络层协议）"></a>OSPF（网络层协议）</h2><p>要点：</p>
+<ul>
+<li>向本自治系统中<strong>所有路由器</strong>发送信息。使用<strong>洪泛法</strong>。</li>
+<li>发送的信息就是与本路由器<strong>相邻的所有路由器的链路状态</strong>。</li>
+<li>只有当链路状态发生变化时，路由器才向所有路由器用洪泛法发送此信息。</li>
+</ul>
+<p>为了使OSPF能够用于规模很大的网络，OSPF将一个自治系统再划分为若干个更小的范围，叫做<strong>区域</strong>。划分区域的好处就是把利用洪泛法交换链路状态信息的范围局限于每一个区域而不是整个自治系统，这就减少了整个网络上的通信量。为了使某一个区域能够与本区域以外的区域进行通信，OSPF使用<strong>层次结构的区域划分</strong>。</p>
+<p>OSPF分组类型：</p>
+<ul>
+<li><strong>问候分组</strong>，用来发现和维持邻站的可达性。</li>
+<li><strong>数据库描述分组</strong>，向邻站给出自己的链路状态数据库中的所有链路状态项目的摘要信息。</li>
+<li><strong>链路状态请求分组</strong>，向对方请求发送某些链路状态项目的详细信息。</li>
+<li><strong>链路状态更新分组</strong>，用洪泛法对全网更新链路状态。</li>
+<li><strong>链路状态确认分组</strong>，对链路更新分组的确认。</li>
+</ul>
+<h2 id="BGP（网络层协议）"><a href="#BGP（网络层协议）" class="headerlink" title="BGP（网络层协议）"></a>BGP（网络层协议）</h2><p>BGP力求寻找一条能够到达目的网络且比较好的路由，而并非要寻找一条最佳路由。</p>
+<p>BGP采用<strong>路径向量路由选择协议</strong>，与距离向量协议和链路状态协议都有很大区别。</p>
+
       
 
       
@@ -495,7 +511,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">字符串处理</a>
+                <a href="javascript:void(0)" class="js-tag color5">进制转换</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -507,7 +523,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">图形输出</a>
+                <a href="javascript:void(0)" class="js-tag color3">查找</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">字符串处理</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -519,15 +539,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">查找</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">排序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">c++</a>
+                <a href="javascript:void(0)" class="js-tag color5">图形输出</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -539,7 +551,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">进制转换</a>
+                <a href="javascript:void(0)" class="js-tag color3">排序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -560,6 +572,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">two pointers</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">c++</a>
               </li>
             
             <div class="clearfix"></div>
