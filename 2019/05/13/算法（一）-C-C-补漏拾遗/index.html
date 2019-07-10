@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="杂食Space">
 <meta property="og:description" content="..打算过段时间去考CSP，所以最近准备系统性地学一下算法，刚好对考研数据结构也多少有点帮助。这段时间上课写作业用Python比较多，C++很久没用过了，很多用法也忘记了，趁这个机会也可以查漏补缺，不求学多深吧，算法考试够用就满足了。 万能头文件&amp;lt;bits/stdc++.h&amp;gt;唯一缺点是有些oj系统不支持，使用时编译器选择C++。 变量类型整型int取值范围：-2  10^9 ~ 2">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-17T09:11:25.519Z">
+<meta property="og:updated_time" content="2019-07-10T10:50:07.015Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法（一） C&#x2F;C++补漏拾遗">
 <meta name="twitter:description" content="..打算过段时间去考CSP，所以最近准备系统性地学一下算法，刚好对考研数据结构也多少有点帮助。这段时间上课写作业用Python比较多，C++很久没用过了，很多用法也忘记了，趁这个机会也可以查漏补缺，不求学多深吧，算法考试够用就满足了。 万能头文件&amp;lt;bits/stdc++.h&amp;gt;唯一缺点是有些oj系统不支持，使用时编译器选择C++。 变量类型整型int取值范围：-2  10^9 ~ 2">
@@ -331,6 +331,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">..</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#万能头文件-lt-bits-stdc-h-gt"><span class="toc-number">2.</span> <span class="toc-text">万能头文件&lt;bits/stdc++.h&gt;</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#变量类型"><span class="toc-number">3.</span> <span class="toc-text">变量类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#整型"><span class="toc-number">3.1.</span> <span class="toc-text">整型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#浮点型"><span class="toc-number">3.2.</span> <span class="toc-text">浮点型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#布尔型"><span class="toc-number">3.3.</span> <span class="toc-text">布尔型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#位运算符"><span class="toc-number">4.</span> <span class="toc-text">位运算符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数组输入"><span class="toc-number">5.</span> <span class="toc-text">数组输入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三种输出格式"><span class="toc-number">6.</span> <span class="toc-text">三种输出格式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#md"><span class="toc-number">6.1.</span> <span class="toc-text">%md</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0md"><span class="toc-number">6.2.</span> <span class="toc-text">%0md</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mf"><span class="toc-number">6.3.</span> <span class="toc-text">%.mf</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#getchar-putchar"><span class="toc-number">7.</span> <span class="toc-text">getchar()/putchar()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常用math函数"><span class="toc-number">8.</span> <span class="toc-text">常用math函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#for循环注意事项"><span class="toc-number">9.</span> <span class="toc-text">for循环注意事项</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数组"><span class="toc-number">10.</span> <span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#memset"><span class="toc-number">10.1.</span> <span class="toc-text">memset()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符数组输入"><span class="toc-number">10.2.</span> <span class="toc-text">字符数组输入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#scanf-“-s”-str"><span class="toc-number">10.2.1.</span> <span class="toc-text">scanf(“%s”,str)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getchar-putchar-1"><span class="toc-number">10.2.2.</span> <span class="toc-text">getchar()/putchar()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gets-puts"><span class="toc-number">10.2.3.</span> <span class="toc-text">gets()/puts()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#string-h"><span class="toc-number">10.3.</span> <span class="toc-text">string.h</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sscanf与sprintf"><span class="toc-number">10.4.</span> <span class="toc-text">sscanf与sprintf</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数组作函数参数"><span class="toc-number">11.</span> <span class="toc-text">数组作函数参数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#指针"><span class="toc-number">12.</span> <span class="toc-text">指针</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#浮点数的比较"><span class="toc-number">13.</span> <span class="toc-text">浮点数的比较</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#圆周率"><span class="toc-number">14.</span> <span class="toc-text">圆周率</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cin-cout提高效率"><span class="toc-number">15.</span> <span class="toc-text">cin/cout提高效率</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -479,15 +492,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">字符串处理</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">排序</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -499,19 +508,39 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日期处理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">查找</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+                <a href="javascript:void(0)" class="js-tag color5">信息隐藏</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">信息隐藏</a>
+                <a href="javascript:void(0)" class="js-tag color3">排序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">日期处理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">c++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">k-近邻</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">图形输出</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -532,22 +561,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">two pointers</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">c++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">k-近邻</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">图形输出</a>
               </li>
             
             <div class="clearfix"></div>
