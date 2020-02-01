@@ -6,23 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>期末复习_计网 | 杂食Space</title>
+  <title>[LeetCode 167] 两数之和 II - 输入有序数组 | 杂食Space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="五层体系结构 应用层   通过应用进程间的交互来完成特定网络应用。  运输层   负责向两台主机中进程之间的通信提供通用的数据传输服务。   TCP/UDP属于运输层。">
-<meta name="keywords" content="计算机网络">
+  <meta name="description" content="题目链接给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。 函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。">
+<meta name="keywords" content="LeetCode,算法,双指针,数组,二分查找">
 <meta property="og:type" content="article">
-<meta property="og:title" content="期末复习_计网">
-<meta property="og:url" content="http://yoursite.com/2019/06/14/期末复习-计网/index.html">
+<meta property="og:title" content="[LeetCode 167] 两数之和 II - 输入有序数组">
+<meta property="og:url" content="http://yoursite.com/2020/02/01/LeetCode-167-两数之和-II-输入有序数组/index.html">
 <meta property="og:site_name" content="杂食Space">
-<meta property="og:description" content="五层体系结构 应用层   通过应用进程间的交互来完成特定网络应用。  运输层   负责向两台主机中进程之间的通信提供通用的数据传输服务。   TCP/UDP属于运输层。">
+<meta property="og:description" content="题目链接给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。 函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2019/06/14/期末复习-计网/NAT.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/06/14/期末复习-计网/TCP首部格式.jpg">
-<meta property="og:updated_time" content="2019-06-19T07:22:59.550Z">
+<meta property="og:updated_time" content="2020-02-01T12:40:17.130Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="期末复习_计网">
-<meta name="twitter:description" content="五层体系结构 应用层   通过应用进程间的交互来完成特定网络应用。  运输层   负责向两台主机中进程之间的通信提供通用的数据传输服务。   TCP/UDP属于运输层。">
-<meta name="twitter:image" content="http://yoursite.com/2019/06/14/期末复习-计网/NAT.jpg">
+<meta name="twitter:title" content="[LeetCode 167] 两数之和 II - 输入有序数组">
+<meta name="twitter:description" content="题目链接给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。 函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。">
   
     <link rel="alternative" href="/atom.xml" title="杂食Space" type="application/atom+xml">
   
@@ -154,97 +151,34 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-期末复习-计网" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-LeetCode-167-两数之和-II-输入有序数组" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      期末复习_计网
+      [LeetCode 167] 两数之和 II - 输入有序数组
     </h1>
   
 
         
-        <a href="/2019/06/14/期末复习-计网/" class="archive-article-date">
-  	<time datetime="2019-06-14T02:32:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-14</time>
+        <a href="/2020/02/01/LeetCode-167-两数之和-II-输入有序数组/" class="archive-article-date">
+  	<time datetime="2020-02-01T12:33:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="五层体系结构"><a href="#五层体系结构" class="headerlink" title="五层体系结构"></a>五层体系结构</h1><ul>
-<li><p>应用层</p>
-<p>  通过应用进程间的交互来完成特定网络应用。</p>
-</li>
-<li><p>运输层</p>
-<p>  负责向<strong>两台主机中进程之间的通信</strong>提供<strong>通用的数据传输</strong>服务。</p>
-<p>  TCP/UDP属于运输层。</p>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目<a href="https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/" target="_blank" rel="noopener">链接</a></h1><p>给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。</p>
+<p>函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。</p>
 <a id="more"></a>
-</li>
-<li><p>网络层</p>
-<p>  负责为分组交换网上的不同<strong>主机</strong>提供通信服务。</p>
-</li>
-<li><p>数据链路层</p>
-<p>  负责两个<strong>相邻结点</strong>之间的数据传输。</p>
-</li>
-<li><p>物理层</p>
-<p>  传数据单位为<strong>比特</strong>。</p>
-</li>
+<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><ul>
+<li>返回的下标值（index1 和 index2）不是从零开始的。</li>
+<li>你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。</li>
 </ul>
-<h1 id="IP"><a href="#IP" class="headerlink" title="IP"></a>IP</h1><h2 id="数据报-gt-MTU-分片"><a href="#数据报-gt-MTU-分片" class="headerlink" title="数据报-&gt;MTU 分片"></a>数据报-&gt;MTU 分片</h2><p>在IP层下面的每一种数据链路层协议都规定了一个数据帧中的<strong>数据字段的最大长度</strong>，称为<strong>最大传送单元MTU</strong>。</p>
-<p>当一个IP数据报封装成链路层的帧时，此数据报的总长度（首部加数据部分）一定不能超过下面的数据链路层所规定的MTU值。若所传送的数据报长度超过数据链路层的MTU值，就必须把过长的数据报进行分片处理。</p>
-<p>使用尽可能长的IP数据报会使传输效率得到提高，因为每一个IP数据报中首部长度占数据报总长度的比例会小些。使用短数据报时，每一个IP数据报越短，路由器转发的速度就越快。</p>
-<p>在进行分片时，数据报首部中的“总长度”字段是指<strong>分片后的每一个分片</strong>的首部长度与该分片的数据长度的总和。</p>
-<h2 id="地址-划分"><a href="#地址-划分" class="headerlink" title="地址/划分"></a>地址/划分</h2><p>课本P119</p>
-<h2 id="网络地址转换NAT（网络层协议）"><a href="#网络地址转换NAT（网络层协议）" class="headerlink" title="网络地址转换NAT（网络层协议）"></a>网络地址转换NAT（网络层协议）</h2><p>在专用网连接到互联网的路由器上安装NAT软件，此路由器成为NAT路由器，它至少有一个有效的外部全球IP地址。这样，所有使用本地地址的主机在和外界通信时，都要在NAT路由器上将其本地地址转换成全球IP地址。如图所示：</p>
-<p><img src="/2019/06/14/期末复习-计网/NAT.jpg" alt="NAT"></p>
-<p>NAT路由器具有n个全球IP地址时，专用网内最多可以同时有n台主机接入到互联网。</p>
-<p>通过NAT路由器的通信必须由专用网内的主机发起。若由互联网上的主机发起，NAT路由器就不知道应当把目的IP地址转换成专用网内的哪一个本地IP地址。</p>
-<h2 id="地址解析协议ARP（网络层协议）"><a href="#地址解析协议ARP（网络层协议）" class="headerlink" title="地址解析协议ARP（网络层协议）"></a>地址解析协议ARP（网络层协议）</h2><p>网络层使用的是IP地址，但在实际网络的链路上传送数据帧时，最后还是必须使用该网络的硬件地址。但IP地址和网络的硬件地址之间由于格式不同而不存在简单的映射关系。此外，在一个网络中增减主机或更换网络适配器都会使硬件地址改变。</p>
-<p>ARP解决这个问题的方法是在主机<strong>ARP高速缓存</strong>中存放一个从IP地址到硬件地址的映射表，并且这个映射表还经常动态更新。</p>
-<h1 id="TCP（运输层协议）"><a href="#TCP（运输层协议）" class="headerlink" title="TCP（运输层协议）"></a>TCP（运输层协议）</h1><h2 id="报文段"><a href="#报文段" class="headerlink" title="报文段"></a>报文段</h2><p><img src="/2019/06/14/期末复习-计网/TCP首部格式.jpg" alt="TCP报文段首部格式"></p>
-<h2 id="可靠传输"><a href="#可靠传输" class="headerlink" title="可靠传输"></a>可靠传输</h2><h2 id="流量-拥塞"><a href="#流量-拥塞" class="headerlink" title="流量/拥塞"></a>流量/拥塞</h2><h1 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h1><p>理想的路由算法应有如下特点：</p>
-<ul>
-<li>算法必须是正确的和完整的</li>
-<li>算法在计算上应简单</li>
-<li>算法应能适应通信量和网络拓扑的变化，即要有自适应性，也叫稳健性。</li>
-<li>算法应具有稳定性</li>
-<li>算法应是公平的</li>
-<li>算法应是最佳的</li>
-</ul>
-<p>路由选择协议分为两大类</p>
-<ul>
-<li>内部网关协议IGP</li>
-<li>外部网关协议EGP</li>
-</ul>
-<h2 id="RIP（网络层协议）"><a href="#RIP（网络层协议）" class="headerlink" title="RIP（网络层协议）"></a>RIP（网络层协议）</h2><p>分布式的<strong>基于距离向量的路由选择协议</strong>，最大优点是简单。</p>
-<p>RIP协议要求网络中的每一个路由器都要维护从它自己到其他每一个目的网络的距离记录（因此，这是一组距离，即“距离向量”）。</p>
-<p>RIP协议的特点：</p>
-<ul>
-<li>仅和相邻路由器交换信息。</li>
-<li>路由器交换的信息是当前本路由器所知道的全部信息，即自己现在的路由表。</li>
-<li>按固定的时间间隔交换路由信息。</li>
-</ul>
-<p>距离向量算法：P155</p>
-<h2 id="OSPF（网络层协议）"><a href="#OSPF（网络层协议）" class="headerlink" title="OSPF（网络层协议）"></a>OSPF（网络层协议）</h2><p>要点：</p>
-<ul>
-<li>向本自治系统中<strong>所有路由器</strong>发送信息。使用<strong>洪泛法</strong>。</li>
-<li>发送的信息就是与本路由器<strong>相邻的所有路由器的链路状态</strong>。</li>
-<li>只有当链路状态发生变化时，路由器才向所有路由器用洪泛法发送此信息。</li>
-</ul>
-<p>为了使OSPF能够用于规模很大的网络，OSPF将一个自治系统再划分为若干个更小的范围，叫做<strong>区域</strong>。划分区域的好处就是把利用洪泛法交换链路状态信息的范围局限于每一个区域而不是整个自治系统，这就减少了整个网络上的通信量。为了使某一个区域能够与本区域以外的区域进行通信，OSPF使用<strong>层次结构的区域划分</strong>。</p>
-<p>OSPF分组类型：</p>
-<ul>
-<li><strong>问候分组</strong>，用来发现和维持邻站的可达性。</li>
-<li><strong>数据库描述分组</strong>，向邻站给出自己的链路状态数据库中的所有链路状态项目的摘要信息。</li>
-<li><strong>链路状态请求分组</strong>，向对方请求发送某些链路状态项目的详细信息。</li>
-<li><strong>链路状态更新分组</strong>，用洪泛法对全网更新链路状态。</li>
-<li><strong>链路状态确认分组</strong>，对链路更新分组的确认。</li>
-</ul>
-<h2 id="BGP（网络层协议）"><a href="#BGP（网络层协议）" class="headerlink" title="BGP（网络层协议）"></a>BGP（网络层协议）</h2><p>BGP力求寻找一条能够到达目的网络且比较好的路由，而并非要寻找一条最佳路由。</p>
-<p>BGP采用<strong>路径向量路由选择协议</strong>，与距离向量协议和链路状态协议都有很大区别。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: numbers = [2, 7, 11, 15], target = 9</span><br><span class="line">输出: [1,2]</span><br><span class="line">解释: 2 与 7 之和等于目标数 9 。因此 index1 = 1, index2 = 2 。</span><br></pre></td></tr></table></figure>
 
       
 
@@ -258,7 +192,23 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算机网络</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LeetCode</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">双指针</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数组</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">二分查找</a>
         		</li>
       		
 		</ul>
@@ -314,7 +264,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/14/期末复习-计网/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/01/LeetCode-167-两数之和-II-输入有序数组/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -328,18 +278,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/06/14/期末复习-信息隐藏/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          期末复习_信息隐藏
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/05/26/PAT甲级1025-PAT-Ranking/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">PAT甲级1025 PAT Ranking</div>
+    <a href="/2020/02/01/LeetCode刷题目录/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LeetCode刷题目录</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -378,7 +319,7 @@
 <script src="https://jjeejj.github.io/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://yoursite.com/2019/06/14/期末复习-计网/",
+  id: "http://yoursite.com/2020/02/01/LeetCode-167-两数之和-II-输入有序数组/",
   owner: 'OmnAni',
   repo: 'OmnAni.github.io',
   oauth: {
