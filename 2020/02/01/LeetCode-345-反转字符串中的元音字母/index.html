@@ -6,23 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Java学习笔记（二） Java的基本程序设计结构 | 杂食Space</title>
+  <title>[LeetCode 345] 反转字符串中的元音字母 | 杂食Space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个简单的Java应用程序12345public class FirstSample &amp;#123;    public static void main(String[] args) &amp;#123;        System.out.println(&quot;We will not use &apos;Hello World!&apos;&quot;);    &amp;#125;&amp;#125; 以此程序为例：  Java区分大小写。 标准的命">
-<meta name="keywords" content="Java">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Java学习笔记（二） Java的基本程序设计结构">
-<meta property="og:url" content="http://yoursite.com/2019/07/10/Java学习笔记（二）-Java的基本程序设计结构/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="[LeetCode 345] 反转字符串中的元音字母">
+<meta property="og:url" content="http://yoursite.com/2020/02/01/LeetCode-345-反转字符串中的元音字母/index.html">
 <meta property="og:site_name" content="杂食Space">
-<meta property="og:description" content="一个简单的Java应用程序12345public class FirstSample &amp;#123;    public static void main(String[] args) &amp;#123;        System.out.println(&quot;We will not use &apos;Hello World!&apos;&quot;);    &amp;#125;&amp;#125; 以此程序为例：  Java区分大小写。 标准的命">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2019/07/10/Java学习笔记（二）-Java的基本程序设计结构/DataType.JPG">
-<meta property="og:image" content="http://yoursite.com/2019/07/10/Java学习笔记（二）-Java的基本程序设计结构/浮点.JPG">
-<meta property="og:updated_time" content="2019-07-11T03:53:37.840Z">
+<meta property="og:updated_time" content="2020-02-01T14:18:07.595Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java学习笔记（二） Java的基本程序设计结构">
-<meta name="twitter:description" content="一个简单的Java应用程序12345public class FirstSample &amp;#123;    public static void main(String[] args) &amp;#123;        System.out.println(&quot;We will not use &apos;Hello World!&apos;&quot;);    &amp;#125;&amp;#125; 以此程序为例：  Java区分大小写。 标准的命">
-<meta name="twitter:image" content="http://yoursite.com/2019/07/10/Java学习笔记（二）-Java的基本程序设计结构/DataType.JPG">
+<meta name="twitter:title" content="[LeetCode 345] 反转字符串中的元音字母">
   
     <link rel="alternative" href="/atom.xml" title="杂食Space" type="application/atom+xml">
   
@@ -154,45 +147,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java学习笔记（二）-Java的基本程序设计结构" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-LeetCode-345-反转字符串中的元音字母" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java学习笔记（二） Java的基本程序设计结构
+      [LeetCode 345] 反转字符串中的元音字母
     </h1>
   
 
         
-        <a href="/2019/07/10/Java学习笔记（二）-Java的基本程序设计结构/" class="archive-article-date">
-  	<time datetime="2019-07-10T11:45:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
+        <a href="/2020/02/01/LeetCode-345-反转字符串中的元音字母/" class="archive-article-date">
+  	<time datetime="2020-02-01T14:18:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="一个简单的Java应用程序"><a href="#一个简单的Java应用程序" class="headerlink" title="一个简单的Java应用程序"></a>一个简单的Java应用程序</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FirstSample</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"We will not use 'Hello World!'"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以此程序为例：</p>
-<ul>
-<li>Java区分大小写。</li>
-<li>标准的命名规范：类名是以大写字母开头的名词。如果名字由多个单词组成，每个单词的第一个字母都应该大写（骆驼命名法）.</li>
-<li>源代码的文件名必须与公共类的名字相同，并用.java作为扩展名。如上述代码所处文件名为FirstSample.java。</li>
-<li>编译源码后会得到一个包含这个类字节码的文件，上述代码编译后会得到字节码文件FirstSample.class，并与源代码文件处于同一目录下。</li>
-<li>使用命令 <code>java FirstSample</code>运行程序。</li>
-</ul>
-<p>Java的类与C++很相似，但还是有些差异。Java中的所有函数都属于某个类的方法。因此，Java的main方法必须有一个外壳类，并且main方法一定是静态的。</p>
-<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>Java有三种标记注释的方式。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FirstSample</span> </span>&#123;<span class="comment">//第一种注释方式</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">/*第二种注释方式*/</span></span><br><span class="line">        System.out.println(<span class="string">"We will not use 'Hello World!'"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 第三种注释方式</span></span><br><span class="line"><span class="comment"> * 可以用来多行注释</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure></p>
-<p>注意<code>/* */</code>不能嵌套</p>
-<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>Java一共有8种基本类型，其中有4种整型、2种浮点类型、1种用于表示Unicode编码的字符单元的字符类型char和1种用于表示真值的boolean类型。</p>
-<h2 id="1-整型"><a href="#1-整型" class="headerlink" title="1.整型"></a>1.整型</h2><p>Java提供4种整型。<br><img src="/2019/07/10/Java学习笔记（二）-Java的基本程序设计结构/DataType.JPG" alt="整型"></p>
-<p>长整型数值后有一个后缀L或l（如4000000L）。十六进制数值有一个前缀0x或0X（如0XCAFE）。八进制有一个前缀0，例如，010对应八进制中的8。八进制表示法容易混淆，不建议使用八进制常数。</p>
-<p>加前缀0b或0B可以写二进制数。例如0b1001就是9。还可以为数字字面量加下划线，如用1_000_000或（0b1111_0100_0010_0100_0000）表示一百万。下划线只是为了让人更易读，Java编译器会去除这些下划线。</p>
-<p>Java没有任何无符号形式的int、long、short或byte类型。</p>
-<h2 id="2-浮点类型"><a href="#2-浮点类型" class="headerlink" title="2.浮点类型"></a>2.浮点类型</h2><p>Java提供2种浮点类型。<br><img src="/2019/07/10/Java学习笔记（二）-Java的基本程序设计结构/浮点.JPG" alt="浮点"></p>
-
+        
       
 
       
@@ -200,17 +175,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -261,7 +225,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/10/Java学习笔记（二）-Java的基本程序设计结构/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/01/LeetCode-345-反转字符串中的元音字母/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -275,18 +239,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/01/LeetCode刷题目录/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          LeetCode刷题目录
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/07/10/Java学习笔记（一）-JAVA概述/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java学习笔记（一） JAVA概述</div>
+    <a href="/2020/02/01/LeetCode-633-平方数之和/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">[LeetCode 633] 平方数之和</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -305,19 +260,6 @@
             </div>
         </div>
         
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一个简单的Java应用程序"><span class="toc-number">1.</span> <span class="toc-text">一个简单的Java应用程序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#注释"><span class="toc-number">2.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据类型"><span class="toc-number">3.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-整型"><span class="toc-number">3.1.</span> <span class="toc-text">1.整型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-浮点类型"><span class="toc-number">3.2.</span> <span class="toc-text">2.浮点类型</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
         
     </div>
 </aside>
@@ -338,7 +280,7 @@
 <script src="https://jjeejj.github.io/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://yoursite.com/2019/07/10/Java学习笔记（二）-Java的基本程序设计结构/",
+  id: "http://yoursite.com/2020/02/01/LeetCode-345-反转字符串中的元音字母/",
   owner: 'OmnAni',
   repo: 'OmnAni.github.io',
   oauth: {
