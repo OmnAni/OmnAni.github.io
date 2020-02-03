@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="杂食Space">
 <meta property="og:description" content="题目链接给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-02-02T09:47:52.062Z">
+<meta property="og:updated_time" content="2020-02-03T13:36:51.277Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[LeetCode 88] 合并两个有序数组">
 <meta name="twitter:description" content="题目链接给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。">
@@ -175,7 +175,9 @@
 <a id="more"></a>
 <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>初始化 nums1 和 nums2 的元素数量分别为 m 和 n。<br>你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。</p>
 <h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">nums1 = [1,2,3,0,0,0], m = 3</span><br><span class="line">nums2 = [2,5,6],       n = 3</span><br><span class="line"></span><br><span class="line">输出: [1,2,2,3,5,6]</span><br></pre></td></tr></table></figure>
-<h1 id="解题过程"><a href="#解题过程" class="headerlink" title="解题过程"></a>解题过程</h1>
+<h1 id="解题过程"><a href="#解题过程" class="headerlink" title="解题过程"></a>解题过程</h1><p>做这道题的问题主要在于Java关于数组的一些方法不会用，思路并不难，用两个指针放在两个数组开头，每次把较小的值放入num1即可，直接上官方题解吧，代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span> m, <span class="keyword">int</span>[] nums2, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] nums1_copy = <span class="keyword">new</span> <span class="keyword">int</span>[m];</span><br><span class="line">        System.arraycopy(nums1, <span class="number">0</span>, nums1_copy, <span class="number">0</span>, m);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Two get pointers for nums1_copy and nums2.</span></span><br><span class="line">        <span class="keyword">int</span> p1 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> p2 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Set pointer for nums1</span></span><br><span class="line">        <span class="keyword">int</span> p = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Compare elements from nums1_copy and nums2</span></span><br><span class="line">        <span class="comment">// and add the smallest one into nums1.</span></span><br><span class="line">        <span class="keyword">while</span> ((p1 &lt; m) &amp;&amp; (p2 &lt; n))</span><br><span class="line">            nums1[p++] = (nums1_copy[p1] &lt; nums2[p2]) ? nums1_copy[p1++] : nums2[p2++];</span><br><span class="line"></span><br><span class="line">        <span class="comment">// if there are still elements to add</span></span><br><span class="line">        <span class="keyword">if</span> (p1 &lt; m)</span><br><span class="line">            System.arraycopy(nums1_copy, p1, nums1, p1 + p2, m + n - p1 - p2);</span><br><span class="line">        <span class="keyword">if</span> (p2 &lt; n)</span><br><span class="line">            System.arraycopy(nums2, p2, nums1, p1 + p2, m + n - p1 - p2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>代码里的<code>System.arraycopy</code>之前没有见过，挺好用的。</p>
+
       
 
       
@@ -473,19 +475,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">排序</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -493,11 +487,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">进制转换</a>
+                <a href="javascript:void(0)" class="js-tag color1">字符串处理</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">字符串处理</a>
+                <a href="javascript:void(0)" class="js-tag color3">数学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">进制转换</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -505,11 +503,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">codeup</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">查找</a>
+                <a href="javascript:void(0)" class="js-tag color2">codeup</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -518,6 +516,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">信息隐藏</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">查找</a>
               </li>
              
               <li class="article-tag-list-item">
