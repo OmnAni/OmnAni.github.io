@@ -16,10 +16,12 @@
 <meta property="og:site_name" content="杂食Space">
 <meta property="og:description" content="题目链接给定一个字符串和一个字符串字典，找到字典里面最长的字符串，该字符串可以通过删除给定字符串的某些字符来得到。如果答案不止一个，返回长度最长且字典顺序最小的字符串。如果答案不存在，则返回空字符串。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-02-02T10:50:39.278Z">
+<meta property="og:image" content="http://yoursite.com/2020/02/02/LeetCode-524-通过删除字母匹配到字典里最长单词/submit.jpg">
+<meta property="og:updated_time" content="2020-02-06T12:26:42.950Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[LeetCode 524] 通过删除字母匹配到字典里最长单词">
 <meta name="twitter:description" content="题目链接给定一个字符串和一个字符串字典，找到字典里面最长的字符串，该字符串可以通过删除给定字符串的某些字符来得到。如果答案不止一个，返回长度最长且字典顺序最小的字符串。如果答案不存在，则返回空字符串。">
+<meta name="twitter:image" content="http://yoursite.com/2020/02/02/LeetCode-524-通过删除字母匹配到字典里最长单词/submit.jpg">
   
     <link rel="alternative" href="/atom.xml" title="杂食Space" type="application/atom+xml">
   
@@ -180,7 +182,12 @@
 <li>字典的大小不会超过 1000。</li>
 <li>所有输入的字符串长度不会超过 1000。</li>
 </ol>
-<h1 id="解题过程"><a href="#解题过程" class="headerlink" title="解题过程"></a>解题过程</h1>
+<h1 id="解题过程"><a href="#解题过程" class="headerlink" title="解题过程"></a>解题过程</h1><p>刷到了中等难度的题，以为会很难，可能是因为最近双指针做得多了，思路直接出来了。</p>
+<p>创建一个String变量存储实时的最优解，遍历List里的字符串。若待检测的字符串长度小于最优解，或字典顺序大于最优解，或者长度大于s字符串，则跳过此字符串。若待检测字符串有机会成为下一个最优解，就用双指针，一个放在s字符串开头，一个放在待检测字符串开头，按字符遍历两字符串，取得最优解。代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">findLongestWord</span><span class="params">(String s, List&lt;String&gt; d)</span> </span>&#123;</span><br><span class="line">        String ans = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">char</span>[] strchar;</span><br><span class="line">        <span class="keyword">char</span>[] schar = s.toCharArray();</span><br><span class="line">        <span class="keyword">int</span> p1, p2;</span><br><span class="line">        <span class="keyword">for</span> (String str : d) &#123;</span><br><span class="line">            <span class="keyword">if</span> (str.length() &lt; ans.length() || str.length() &gt; s.length() || (str.length() == ans.length() &amp;&amp; str.compareTo(ans) &gt; <span class="number">0</span>)) &#123;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                strchar = str.toCharArray();</span><br><span class="line">                p1 = <span class="number">0</span>;</span><br><span class="line">                p2 = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">while</span> (p1 &lt; s.length() &amp;&amp; p2 &lt; str.length()) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (schar[p1] != strchar[p2]) &#123;</span><br><span class="line">                        p1++;</span><br><span class="line">                    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (schar[p1] == strchar[p2]) &#123;</span><br><span class="line">                        p1++;</span><br><span class="line">                        p2++;</span><br><span class="line">                        <span class="keyword">if</span> (p2 == str.length()) &#123;</span><br><span class="line">                            ans = str;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>这么多if嵌套我头都晕了，以为会调试很久，结果一次过了，成绩还不错，ok。</p>
+<p><img src="/2020/02/02/LeetCode-524-通过删除字母匹配到字典里最长单词/submit.jpg" alt="submit"></p>
+
       
 
       
@@ -441,10 +448,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
               </li>
              
@@ -461,7 +464,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">排序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -473,11 +480,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">排序</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -497,11 +508,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color2">codeup</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">codeup</a>
+                <a href="javascript:void(0)" class="js-tag color5">日期处理</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -509,7 +520,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日期处理</a>
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -525,7 +536,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+                <a href="javascript:void(0)" class="js-tag color4">c++</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -542,10 +553,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">two pointers</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">c++</a>
               </li>
             
             <div class="clearfix"></div>
