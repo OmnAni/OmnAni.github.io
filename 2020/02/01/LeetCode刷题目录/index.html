@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>LeetCode刷题目录 | 杂食Space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言">
+  <meta name="description" content="前言此文大量参考GitHub用户Cyc2018的此文档">
 <meta name="keywords" content="LeetCode,算法,数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode刷题目录">
 <meta property="og:url" content="http://yoursite.com/2020/02/01/LeetCode刷题目录/index.html">
 <meta property="og:site_name" content="杂食Space">
-<meta property="og:description" content="前言">
+<meta property="og:description" content="前言此文大量参考GitHub用户Cyc2018的此文档">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-02-02T09:44:04.079Z">
+<meta property="og:updated_time" content="2020-02-06T15:00:38.547Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode刷题目录">
-<meta name="twitter:description" content="前言">
+<meta name="twitter:description" content="前言此文大量参考GitHub用户Cyc2018的此文档">
   
     <link rel="alternative" href="/atom.xml" title="杂食Space" type="application/atom+xml">
   
@@ -171,7 +171,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><a id="more"></a>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>此文大量参考GitHub用户Cyc2018的<a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E6%8E%92%E5%BA%8F.md" target="_blank" rel="noopener">此文档</a><br><a id="more"></a></p>
 <h1 id="一、算法思想"><a href="#一、算法思想" class="headerlink" title="一、算法思想"></a>一、算法思想</h1><h2 id="1、双指针"><a href="#1、双指针" class="headerlink" title="1、双指针"></a>1、双指针</h2><table>
 <thead>
 <tr>
@@ -218,7 +218,45 @@
 </tr>
 </tbody>
 </table>
-<h2 id="2、排序"><a href="#2、排序" class="headerlink" title="2、排序"></a>2、排序</h2><h3 id="a、快速排序"><a href="#a、快速排序" class="headerlink" title="a、快速排序"></a>a、快速排序</h3><h3 id="b、堆"><a href="#b、堆" class="headerlink" title="b、堆"></a>b、堆</h3><h3 id="c、桶排序"><a href="#c、桶排序" class="headerlink" title="c、桶排序"></a>c、桶排序</h3><h3 id="d、荷兰国旗问题"><a href="#d、荷兰国旗问题" class="headerlink" title="d、荷兰国旗问题"></a>d、荷兰国旗问题</h3><h2 id="3、贪心思想"><a href="#3、贪心思想" class="headerlink" title="3、贪心思想"></a>3、贪心思想</h2><h2 id="4、二分查找"><a href="#4、二分查找" class="headerlink" title="4、二分查找"></a>4、二分查找</h2><h2 id="5、分治"><a href="#5、分治" class="headerlink" title="5、分治"></a>5、分治</h2><h2 id="6、搜索"><a href="#6、搜索" class="headerlink" title="6、搜索"></a>6、搜索</h2><h2 id="7、动态规划"><a href="#7、动态规划" class="headerlink" title="7、动态规划"></a>7、动态规划</h2><h2 id="8、数学"><a href="#8、数学" class="headerlink" title="8、数学"></a>8、数学</h2><h1 id="二、数据结构相关"><a href="#二、数据结构相关" class="headerlink" title="二、数据结构相关"></a>二、数据结构相关</h1><ul>
+<h2 id="2、排序"><a href="#2、排序" class="headerlink" title="2、排序"></a>2、排序</h2><h3 id="a、快速排序"><a href="#a、快速排序" class="headerlink" title="a、快速排序"></a>a、快速排序</h3><p>用于求解 Kth Element 问题，也就是第 K 个元素的问题。</p>
+<p>可以使用快速排序的 partition() 进行实现。需要先打乱数组，否则最坏情况下时间复杂度为 O(N2)。</p>
+<h3 id="b、堆"><a href="#b、堆" class="headerlink" title="b、堆"></a>b、堆</h3><p>用于求解 TopK Elements 问题，也就是 K 个最小元素的问题。可以维护一个大小为 K 的最小堆，最小堆中的元素就是最小元素。最小堆需要使用大顶堆来实现，大顶堆表示堆顶元素是堆中最大元素。这是因为我们要得到 k 个最小的元素，因此当遍历到一个新的元素时，需要知道这个新元素是否比堆中最大的元素更小，更小的话就把堆中最大元素去除，并将新元素添加到堆中。所以我们需要很容易得到最大元素并移除最大元素，大顶堆就能很好满足这个要求。</p>
+<p>堆也可以用于求解 Kth Element 问题，得到了大小为 k 的最小堆之后，因为使用了大顶堆来实现，因此堆顶元素就是第 k 大的元素。</p>
+<p>快速选择也可以求解 TopK Elements 问题，因为找到 Kth Element 之后，再遍历一次数组，所有小于等于 Kth Element 的元素都是 TopK Elements。</p>
+<p>可以看到，快速选择和堆排序都可以求解 Kth Element 和 TopK Elements 问题。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">标号</th>
+<th style="text-align:center">标题</th>
+<th style="text-align:center">难度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">215</td>
+<td style="text-align:center"><a href>数组中的第K个最大元素</a></td>
+<td style="text-align:center">中等</td>
+</tr>
+</tbody>
+</table>
+<h3 id="c、桶排序"><a href="#c、桶排序" class="headerlink" title="c、桶排序"></a>c、桶排序</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">标号</th>
+<th style="text-align:center">标题</th>
+<th style="text-align:center">难度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">347</td>
+<td style="text-align:center"><a href>前 K 个高频元素</a></td>
+<td style="text-align:center">中等</td>
+</tr>
+</tbody>
+</table>
+<h3 id="d、荷兰国旗问题"><a href="#d、荷兰国旗问题" class="headerlink" title="d、荷兰国旗问题"></a>d、荷兰国旗问题</h3><h2 id="3、贪心思想"><a href="#3、贪心思想" class="headerlink" title="3、贪心思想"></a>3、贪心思想</h2><h2 id="4、二分查找"><a href="#4、二分查找" class="headerlink" title="4、二分查找"></a>4、二分查找</h2><h2 id="5、分治"><a href="#5、分治" class="headerlink" title="5、分治"></a>5、分治</h2><h2 id="6、搜索"><a href="#6、搜索" class="headerlink" title="6、搜索"></a>6、搜索</h2><h2 id="7、动态规划"><a href="#7、动态规划" class="headerlink" title="7、动态规划"></a>7、动态规划</h2><h2 id="8、数学"><a href="#8、数学" class="headerlink" title="8、数学"></a>8、数学</h2><h1 id="二、数据结构相关"><a href="#二、数据结构相关" class="headerlink" title="二、数据结构相关"></a>二、数据结构相关</h1><ul>
 <li><p>链表</p>
 </li>
 <li><p>树</p>
@@ -502,6 +540,10 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
               </li>
              
@@ -518,10 +560,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">排序</a>
               </li>
              
@@ -534,15 +572,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
+                <a href="javascript:void(0)" class="js-tag color2">堆</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数学</a>
+                <a href="javascript:void(0)" class="js-tag color5">分治算法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -554,7 +596,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">进制转换</a>
+                <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -562,11 +604,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">codeup</a>
+                <a href="javascript:void(0)" class="js-tag color5">进制转换</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日期处理</a>
+                <a href="javascript:void(0)" class="js-tag color2">codeup</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -574,7 +616,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+                <a href="javascript:void(0)" class="js-tag color5">日期处理</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -583,6 +625,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">k-近邻</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
              
               <li class="article-tag-list-item">
